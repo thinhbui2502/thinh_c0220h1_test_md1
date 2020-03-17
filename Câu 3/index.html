@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 3</title>
+</head>
+<body>
+<script>
+    let arr = [1, 1];
+
+    function printFibonacci(number) {
+        if (number === 1) {
+            return [1]
+        } else if (!number) {
+            return undefined
+        }
+        for (let i = 2; i <= number; i++) {
+            arr.push(arr[i - 1] + arr[i - 2])
+        }
+        return arr;
+    }
+
+
+    function isFibonacci(N) {
+        for (let i = 0; i < arr.length; i++) {
+            if (N === arr[i]) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    let number = parseInt(prompt('NHập vào số bất kỳ'));
+    printFibonacci(number);
+    alert(isFibonacci(number));
+
+
+</script>
+</body>
+</html>
